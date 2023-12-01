@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Login } from '../cad-login/login';
+import { Router } from '@angular/router';
+import { LoginService } from 'src/app/service/login.service';
+import { Usuario } from 'src/app/usuario/usuario';
+import { User } from '../user/user';
 
 @Component({
   selector: 'app-login',
@@ -7,4 +12,28 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  usuario: User = new User();
+  login: Login = new Login();
+  roteador = inject(Router);
+  loginService = inject(LoginService);
+
+  constructor(){
+    this.loginService.removerToken();
+  }
+
+  logar() {
+
+
+    this.loginService.logar(this.login).subscribe({
+      next: user => { // QUANDO DÁ CERTO
+        console.log(user);
+        this.loginService.addToken(user.token);
+        this.roteador.navigate(['admin/pedidos']);
+      },
+      error: erro => { // QUANDO DÁ ERRO
+        alert('Exemplo de tratamento de erro/exception! Observe o erro no console!');
+        console.error(erro);
+      }
+    });
+  }
 }

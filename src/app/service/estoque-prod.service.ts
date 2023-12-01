@@ -8,7 +8,7 @@ import { EstoqueProds } from '../estoqueProd/estoqueProds';
 })
 export class EstoqueProdService {
 
-  API: string  = 'http://localhost:8080/api/estoqueProd';
+  API: string  = 'http://localhost:8010/api/estoqueProd';
 
   http = inject(HttpClient);
 

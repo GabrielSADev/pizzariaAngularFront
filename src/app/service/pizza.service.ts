@@ -10,7 +10,7 @@ import { Sabores } from '../sabores/sabores';
 })
 export class PizzaService {
 
-  API: string = 'http://localhost:8080/api/pizza'
+  API: string = 'http://localhost:8010/api/pizza'
 
   http = inject(HttpClient);
 

@@ -80,7 +80,7 @@ describe('PedidodetailsComponent', () => {
       expect(response).toBeTruthy();
     });
 
-    const req = httpTestingController.expectOne(`http://localhost:8080/api/pedido/${idToDelete}`);
+    const req = httpTestingController.expectOne(`http://localhost:8010/api/pedido?id=${idToDelete}`);
     expect(req.request.method).toEqual('DELETE');
 
     req.flush({});

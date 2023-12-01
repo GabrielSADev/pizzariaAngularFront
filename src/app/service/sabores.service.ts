@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SaboresService {
-  API: string = 'http://localhost:8080/api/sabores';
+  API: string = 'http://localhost:8010/api/sabores';
 
   http = inject(HttpClient);
 

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Endereco } from '../endereco';
 
 @Component({
   selector: 'app-enderecodetails',
@@ -6,5 +7,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./enderecodetails.component.scss']
 })
 export class EnderecodetailsComponent {
-
 }

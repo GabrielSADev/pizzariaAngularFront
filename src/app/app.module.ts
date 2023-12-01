@@ -26,6 +26,7 @@ import { ProdutosdetailsComponent } from './produtos/produtosdetails/produtosdet
 import { ProdutoslistComponent } from './produtos/produtoslist/produtoslist.component';
 import { PedidolistComponent } from './pedido/pedidolist/pedidolist.component';
 import { PedidodetailsComponent } from './pedido/pedidodetails/pedidodetails.component';
+import { httpInterceptorProviders } from './interceptors/httpinterceptor.service';
 
 
 @NgModule({
@@ -62,7 +63,9 @@ import { PedidodetailsComponent } from './pedido/pedidodetails/pedidodetails.com
     HttpClientModule,
     NgbModule
   ],
-  providers: [],
+  providers: [
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,7 +10,7 @@ import { EstoqueProds } from '../estoqueProd/estoqueProds';
 })
 export class ProdutosService {
 
-  API: string = 'http://localhost:8080/api/produtos'
+  API: string = 'http://localhost:8010/api/produtos'
 
   http = inject(HttpClient);
 

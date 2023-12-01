@@ -1,14 +1,14 @@
 <div class="divLogin">
-    <form action="">
+    <form class="login-form" (ngSubmit)="logar()">
         <h1>Login 🐧</h1>
         <p>Nome de Usuário:</p>
-        <input type="text" name="Usuario" placeholder="Usuario" class="inputMod">
+        <input type="text" name="Usuario" placeholder="Usuario" class="inputMod" [(ngModel)]="login.username">
         <br>
         <p id="senhaInput">Senha:</p>
-        <input type="password" name="Senha" placeholder="Senha" class="inputMod">
+        <input type="password" name="Senha" placeholder="Senha" class="inputMod" [(ngModel)]="login.password">
         <br>
         <br>
-        <input routerLink="/admin/sabores" type="button" value="Logar" class="btn btn-primary" id="botao">
+        <button type="submit" class="btn btn-primary" id="botao">Logar</button>
         <br>
         <br>
         <p class="cadastrar" routerLink="/cadLogin">Não tem uma conta? Cadastre-se!!</p>

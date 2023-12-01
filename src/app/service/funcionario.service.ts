@@ -7,7 +7,7 @@ import { Funcionario } from '../funcionario/funcionario';
   providedIn: 'root'
 })
 export class FuncionarioService {
-  API: string = 'http://localhost:8080/api/funcionario'
+  API: string = 'http://localhost:8010/api/funcionario'
 
   http = inject(HttpClient);
 
